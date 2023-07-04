@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs")-%>
+<h1> Home </h1>
+<p> <%= startingContent %></p>
+<%newPost.forEach(function(post){%>
+    <%var printTitle= post.titleReceived;%>
+    <%var printBody= post.bodyReceived;%>
+    <h1><%= printTitle %></h1>
+    <p><%= printBody %>
+        <% var urlCustom= "posts/"+printTitle %>
+    <a href= "/posts/<%=printTitle%>" >Follow Along!</a></p>
+    <%})%>
+<%- include("partials/footer.ejs")-%>

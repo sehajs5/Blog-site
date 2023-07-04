@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs")-%>
+<h1> Compose </h1>
+<form action="/compose" method="post">
+    <div class="form-group">
+        <label for="composeText">Title</label>
+        <br>
+        <input type="text" class="form-control input-sm" name="composeTitleText">
+        <label for="composeText">Post</label>
+        <br>
+        <!-- <input style="height: 120px;" class="form-control input-lg" name="composeBodyText"></input> -->
+        <textarea name="composeBodyText" cols="154" rows="5"></textarea>
+        <button name="publishButton" type="submit" class="publishButton btn btn-primary">Publish</button>
+    </div>
+</form>
+<%- include("partials/footer.ejs")-%>
